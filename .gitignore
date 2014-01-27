@@ -1,3 +1,4 @@
 vendor/*
 installer/*
 media/*
+composer.lock
