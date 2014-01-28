@@ -1,5 +1,8 @@
 vendor/*
-installer/*
 www/media/*
+app/*/
+components/*/
+logs/*/
+tmp/*/
 composer.lock
 configuration.php

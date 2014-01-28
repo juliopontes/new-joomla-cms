@@ -1,16 +1,15 @@
 <?php
-if (!defined('JPATH_ROOT')) {
-	throw new Exception('define path root');
+// Defines Paths
+define('JPATH_PROJECT', dirname(dirname(__DIR__)));
+define('JPATH_APP', JPATH_PROJECT . '/app');
+define('JPATH_ETC', JPATH_PROJECT . '/etc');
+define('JPATH_VENDOR', JPATH_PROJECT . '/vendor');
+define('JPATH_CONFIGURATION', JPATH_ETC);
+
+// autocreate define app path: JPATH_APP_FOLDERNAME
+$directories = glob(JPATH_APP.'/*', GLOB_ONLYDIR);
+foreach ($directories as $directory) {
+	if (!defined('JPATH_APP_'.$directory)) {
+		define('JPATH_APP_'.$directory, JPATH_APP . '/' . $directory);
+	}
 }
-
-// Root project paths
-define('JPATH_ETC', dirname(dirname(__DIR__)) . '/etc');
-define('JPATH_VENDOR', dirname(dirname(__DIR__)) . '/vendor');
-
-// Load the Composer autoloader
-$vendor_autoload = JPATH_VENDOR . '/autoload.php';
-if (!file_exists($vendor_autoload) || (is_dir(basename($vendor_autoload)) && !file_exists(basename($vendor_autoload)) )) {
-    throw new Exception('run composer install');
-}
-
-require $vendor_autoload;

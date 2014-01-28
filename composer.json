@@ -3,6 +3,7 @@
     "require": {
     	"joomla/jui": "*",
         "joomla-distro/cms-installer-application": "*",
+        "joomla-distro/cms-administrator-application": "*",
         "joomla/framework": "1.0.*@stable",
         "hautelook/phpass": "dev-master"
     }
