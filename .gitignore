@@ -2,3 +2,4 @@ vendor/*
 installer/*
 www/media/*
 composer.lock
+configuration.php
