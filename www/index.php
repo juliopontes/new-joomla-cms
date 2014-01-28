@@ -6,10 +6,10 @@ error_reporting(E_ALL);
 require_once 'includes/defines.php';
 require_once 'includes/autoload.php';
 
-define('JPATH_ROOT', JPATH_FORNTEND);
-
 if (!is_file(JPATH_CONFIGURATION.'/configuration.php')) {
 	header('location: installation/');
 }
+
+define('JPATH_ROOT', JPATH_FRONTEND);
 
 echo 'Site application soon';
