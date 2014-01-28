@@ -4,6 +4,7 @@ define('JPATH_PROJECT', dirname(dirname(__DIR__)));
 define('JPATH_APP', JPATH_PROJECT . '/app');
 define('JPATH_ETC', JPATH_PROJECT . '/etc');
 define('JPATH_VENDOR', JPATH_PROJECT . '/vendor');
+define('JPATH_WEB', JPATH_PROJECT . '/www');
 define('JPATH_CONFIGURATION', JPATH_PROJECT);
 
 // autocreate define app path: JPATH_APP_FOLDERNAME
