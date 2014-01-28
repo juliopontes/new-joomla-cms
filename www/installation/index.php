@@ -10,11 +10,11 @@ define('JPATH_SITE', dirname(dirname(__DIR__)).'/frontend');
 require_once '../includes/defines.php';
 
 $container = new \Joomla\DI\Container;
-$container->registerServiceProvider(new \App\Service\ConfigurationServiceProvider(JPATH_ROOT . '/installer/etc/config.json'))
-    ->registerServiceProvider(new \App\Service\DatabaseServiceProvider);
+$container->registerServiceProvider(new \Installer\Service\ConfigurationServiceProvider(JPATH_ROOT . '/installer/etc/config.json'))
+    ->registerServiceProvider(new \Installer\Service\DatabaseServiceProvider);
 
 // Instantiate the application.
-$application = new \App\App($container);
+$application = new \Installer\App($container);
 
 // Execute the application.
 $application->execute();
