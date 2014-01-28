@@ -1,4 +1,4 @@
 vendor/*
 installer/*
-media/*
+www/media/*
 composer.lock
