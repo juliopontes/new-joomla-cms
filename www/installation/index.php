@@ -4,6 +4,7 @@ ini_set("display_errors",true);
 error_reporting(E_ALL);
 
 define('JPATH_ROOT', dirname(dirname(__DIR__)).'/installer');
+define('JPATH_ADMINISTRATOR', dirname(dirname(__DIR__)).'/administrator');
 
 require_once '../includes/defines.php';
 
