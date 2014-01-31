@@ -1,5 +1,6 @@
 vendor/*
 www/media/*
+www/templates/*
 app/*/
 components/*/
 logs/*/
